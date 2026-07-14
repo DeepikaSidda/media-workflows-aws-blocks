@@ -48,17 +48,20 @@ The frontend is a Vite + lit-html app that imports the typed backend API directl
 ## Project layout
 
 ```
-media-app/
-├─ src/                  # frontend (Vite + lit-html)
-│  └─ index.ts
-├─ aws-blocks/           # backend
-│  ├─ index.ts           # the Blocks app (auth, storage, jobs, realtime, email, cron, API)
-│  ├─ index.handler.ts   # Lambda entry point
-│  ├─ index.cdk.ts       # CDK app (infra + hosting)
-│  └─ scripts/           # dev / deploy / destroy scripts
-├─ .blocks/config.json   # stackId + telemetry (committed)
-├─ index.html
-└─ package.json
+.
+├─ README.md
+├─ media-app/            # the application
+│  ├─ src/               # frontend (Vite + lit-html)
+│  │  └─ index.ts
+│  ├─ aws-blocks/        # backend
+│  │  ├─ index.ts        # the Blocks app (auth, storage, jobs, realtime, email, cron, API)
+│  │  ├─ index.handler.ts# Lambda entry point
+│  │  ├─ index.cdk.ts    # CDK app (infra + hosting)
+│  │  └─ scripts/        # dev / deploy / destroy scripts
+│  ├─ .blocks/config.json# stackId + telemetry (committed)
+│  ├─ index.html
+│  └─ package.json
+└─ .kiro/specs/          # requirements, design, and task specs
 ```
 
 ---
@@ -75,7 +78,10 @@ media-app/
 
 ## Local development
 
+The application lives in the `media-app/` directory, so run commands from there:
+
 ```bash
+cd media-app
 npm install
 npm run dev
 ```
@@ -89,6 +95,8 @@ This starts the backend on local mocks and the Vite frontend. Open the URL print
 ---
 
 ## Deploying to AWS
+
+Run these from the `media-app/` directory:
 
 ```bash
 # Throwaway test stack (backend only, easy teardown)
