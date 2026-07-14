@@ -162,8 +162,4 @@ The `EmailClient` sends completion emails and nightly summaries.
 - **Open sign-up.** `AuthBasic` allows public registration. Fine for a demo; add restrictions before using with real users.
 - **Local vs deployed email.** Local dev only *captures* emails to a file; real delivery happens after deploying with SES configured.
 
----
 
-## License
-
-Demo / educational project.
