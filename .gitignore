@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build / synth output
+dist/
+build-temp/
+cdk.out/
+.hosting/
+*.tsbuildinfo
+
+# Local Blocks dev data & sandbox state
+.bb-data/
+.blocks-sandbox/
+
+# Generated Blocks client / spec
+**/aws-blocks/client.js
+**/aws-blocks/blocks.spec.json
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
